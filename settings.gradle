@@ -1,0 +1,13 @@
+pluginManagement {
+    repositories {
+        maven { url = 'https://maven.fabricmc.net/' }
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+// Do not lock dependency repositories to settings.gradle here.
+// Fabric Loom adds LoomLocalRemappedMods to the project repositories.
+// Enforcing settings-only repositories conflicts with that required repository.
+
+rootProject.name = 'atlas-mod'

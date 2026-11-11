@@ -1,78 +1,47 @@
 # ATLAS — Adventure Notebook
 
-**Author:** MineAura  
-**Minecraft:** Java Edition 26.2  
-**Mod loader:** Fabric  
-**Mod version:** 1.0.0  
-**License:** MIT
+**Author:** MineAura
 
-ATLAS is a lightweight, client-side adventure notebook for Minecraft. Save useful locations in your world so you can find them again later.
+A lightweight, client-side Fabric mod for Minecraft Java 26.2.
 
-## Features
+## Features in this first release
 
-- Open ATLAS with **B** by default.
-- Change the keybind in **Options → Controls → Key Binds → Atlas**.
-- Create location notes with a name, description, tag, and X/Y/Z coordinates.
-- Automatically fill in your current coordinates when creating a note.
+- Press **B** to open Atlas (change it in Options → Controls → Key Binds → Atlas).
+- Create notes with a name, description, category/tag, and X/Y/Z coordinates.
+- Automatically fill coordinates from your current position.
 - Browse and search saved notes.
-- Mark important locations as favorites.
-- Sort notes by name or distance from your current position.
-- View, edit, delete, and copy saved coordinates.
-- Keep notes separate for each single-player world or multiplayer server.
-- No teleportation feature.
+- Favorite important locations.
+- Sort by name or distance from your current position.
+- View, edit, delete, and copy coordinates.
+- Notes are stored separately for each single-player save or multiplayer server.
+- No teleportation and no gameplay/server changes.
 
-## How to use
+## Storage
 
-1. Install Fabric for Minecraft Java 26.2 and the required dependencies.
-2. Launch the game and press **B** to open ATLAS.
-3. Select **+ New Note**.
-4. Enter a location name, description, tag, and coordinates.
-5. Use **Use Current Coords** to fill in your current position, then save the note.
-6. Search or browse your notes later. Select a note to view its details, favorite it, copy its coordinates, edit it, or delete it.
-
-## Where notes are saved
-
-ATLAS stores notes as JSON files in:
-
-```text
-.minecraft/config/atlas/
-```
-
-A separate file is used for each recognized single-player world or multiplayer server.
-
-**Tip:** Back up this folder if you want to preserve your notes when moving to another computer or reinstalling Minecraft.
+Notes are stored in `.minecraft/config/atlas/` as JSON files.
 
 ## Requirements
 
-- Minecraft Java Edition **26.2**
-- Fabric Loader **0.19.3 or newer**
-- Fabric API **0.156.0+26.2**
-- Java **25**
+- Minecraft Java 26.2
+- Fabric Loader 0.19.3 or newer
+- Fabric API 0.156.0+26.2
+- Java/JDK 25
+- Gradle 9.5.1 or newer (9.6.1 recommended)
 
-## Build from source on Windows
+## Build on Windows
 
-You will also need Gradle **9.5.1 or newer** available on your `PATH`.
-
-1. Download and extract the ATLAS source ZIP.
-2. Open PowerShell in the extracted `atlas-mod` project folder.
+1. Extract this source ZIP.
+2. Open PowerShell in the `atlas-mod` folder.
 3. Run:
 
    ```powershell
    .\BUILD-WINDOWS.ps1
    ```
 
-4. If the build succeeds, the script copies the compiled JAR into the `JAR` folder.
+4. The built mod JAR will be copied into `JAR`.
 
-The build script uses the Gradle installation on your system; this project does not include a Gradle wrapper.
+The script uses the Gradle installation on your PATH. It does not bundle a Gradle wrapper.
 
-## Compatibility
+## Notes
 
-This release targets **Minecraft 26.2 with Fabric**. Other Minecraft versions and mod loaders are not claimed to be supported by this release.
-
-## License
-
-ATLAS is distributed under the MIT License. See the [`LICENSE`](LICENSE) file for the full license text.
-
----
-
-Made by **MineAura**.
+This is an initial source release. The source and JSON structure have been checked, but an actual Minecraft/Gradle compile and in-game test must be completed on a machine with the required toolchain before treating the JAR as verified.
